@@ -63,6 +63,11 @@ MIDDLEWARE = [
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 20,
+}
+
 CORS_ORIGIN_ALLOW_ALL = True # for development mode only
 
 ALLOWED_HOSTS = ["*"]
